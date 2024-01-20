@@ -17,7 +17,7 @@ class Storage {
     removeItem(itemToRemove) {
         this.#items.some((item) => {
             if (item === itemToRemove) {
-                this.#items.splice(this.#items[itemToRemove],1)
+                this.#items.splice(this.#items.indexOf(itemToRemove),1)
             }
         })
     }
