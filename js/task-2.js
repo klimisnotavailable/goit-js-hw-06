@@ -15,11 +15,12 @@ class Storage {
         this.#items.push(newItem)
     }
     removeItem(itemToRemove) {
-        this.#items.some((item) => {
+        this.#items.map(item => {
             if (item === itemToRemove) {
-                this.#items.splice(this.#items.indexOf(itemToRemove),1)
+            this.#items.splice(this.#items.indexOf(itemToRemove),1)
             }
-        })
+            return this.#items
+       })
     }
 };
  
