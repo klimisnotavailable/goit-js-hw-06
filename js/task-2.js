@@ -15,8 +15,13 @@ class Storage {
         this.#items.push(newItem)
     }
     removeItem(itemToRemove) {
-       const indexToRemove = this.#items.indexOf(itemToRemove);
-       this.#items.splice(indexToRemove, 1);
+        const indexToRemove = this.#items.indexOf(itemToRemove);
+        if (this.#items.includes(itemToRemove)) {
+            this.#items.splice(indexToRemove, 1);
+        }
+        else {
+            
+        }
     }
 };
  
